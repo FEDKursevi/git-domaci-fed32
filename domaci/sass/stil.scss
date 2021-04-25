@@ -1,5 +1,9 @@
 @import 'mixins';
 @import 'promenljive';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+* {
+    font-family: 'Roboto', sans-serif;
+}
 
 body {
     margin: 0;
@@ -44,5 +48,71 @@ header {
         }
         @include clearFix;
     }
+}
+
+.glavna {
+    position: relative;
+    background-image: url("../../slike/intro.jpg");
+    background-size: cover;
+    height: 650px;
+    div {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 100px;
+        margin: auto;
+        text-align: center;
+        background-color: rgba(68, 67, 67, 0.5);
+        width: 70%;
+        color: white;
+        h1 {
+            margin: 0;
+            font-size: 50px;
+            font-weight: bold;
+        }
+        p {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+}
+
+.button {
+    ul {
+        margin-right: 200px;
+        li {
+            display: inline-block;
+            float: right;
+            padding: 0px 15px;
+            button {
+                background-color: white;
+                border: 1px solid rgb(187, 184, 184);
+                border-radius: 20px;
+                height: 40px;
+                padding: 10px 20px;
+                &:hover {
+                    background-color: $hoverDugme;
+                    color: white;
+                }
+            }
+        }
+        @include clearFix;
+    }
+}
+
+.sekcijaSaSlikama {
+    background-color: $pozadinaSekcija;
+    .divSlike {
+        margin: 50px 150px 50px 200px;
+        div {
+            float: left;
+            padding: 15px;
+        }
+        img {
+            width: 250px;
+            height: 300px;
+        }
+    }
+    @include clearFix;
 }
 
