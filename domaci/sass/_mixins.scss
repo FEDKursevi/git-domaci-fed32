@@ -1,0 +1,28 @@
+@mixin clearFix {
+	&:before, &:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin providnost($providnost: 0.5) {
+	-khtml-opacity: $providnost;
+	  	-moz-opacity: $providnost;
+	       opacity: $providnost;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$providnost * 100})";
+		filter: alpha(opacity=$providnost * 100);
+}
+
+@mixin nevidljivost {
+	margin: -1px;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	clip: rect(0, 0, 0, 0);
+	position: absolute;
+}
