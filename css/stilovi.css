@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  margin: 0;
+  background-color: #374249;
+  color: #797979;
+}
+header:before, header:after {
+  display: table;
+  content: "";
+}
+header:after {
+  clear: both;
+}
+header div {
+  float: left;
+  background-color: #f75311;
+}
+header div img {
+  width: 25%;
+  margin: auto;
+  float: left;
+}
+header div a {
+  padding-top: 1em;
+  float: left;
+  text-decoration: none;
+  color: white;
+}
+header div a:hover {
+  text-decoration: underline;
+}
+header nav {
+  float: left;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+}
+header nav ul li {
+  padding: 0.8em;
+  list-style-type: none;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+section.intro {
+  margin: 0;
+  padding: 0;
+  background-image: url(../slike/intro.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+}
+section.intro div {
+  position: relative;
+  top: 350px;
+  margin: auto;
+  width: 60%;
+  background-color: rgba(88, 85, 85, 0.774);
+  text-align: center;
+}
+section.intro div h1, section.intro div h3 {
+  margin: 0;
+  color: white;
+}
+
+section.filter {
+  margin: 0;
+  background-color: white;
+  padding: 1em;
+}
+section.filter div {
+  margin: 0 2em;
+}
+section.filter div:before, section.filter div:after {
+  display: table;
+  content: "";
+}
+section.filter div:after {
+  clear: both;
+}
+section.filter div button {
+  float: right;
+  padding: 0.5em;
+  margin: 1em;
+  border-radius: 1em;
+  color: #797979;
+}
+section.filter div button:hover {
+  color: white;
+  background-color: #cfd1d3;
+}
+
+section.img {
+  background-color: #f3f7f9;
+  margin: 0;
+}
+section.img div {
+  padding: 2em 0;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+section.img div img {
+  padding: 1em 0.5em;
+  width: 25%;
+}
+
+section.price {
+  margin: 0;
+  background-color: white;
+}
+section.price div {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  padding: 1em;
+}
+section.price div h2 {
+  color: #797979;
+  text-transform: uppercase;
+}
+section.price div h3 {
+  color: #797979;
+}
+section.price div table {
+  border: 1px solid #797979;
+  border-collapse: collapse;
+  margin: 1em auto;
+  padding: 1em;
+}
+section.price div table td, section.price div table th {
+  border: 1px solid #797979;
+  padding: 0.5em 3em;
+}
+section.price div table td.hide {
+  visibility: hidden;
+}
+section.price div table td.descr {
+  background-color: #3f3f3f;
+  color: white;
+}
+section.price div table th {
+  background-color: #f75311;
+  color: white;
+  font-weight: bold;
+}
+
+section.contact {
+  margin: 0;
+  background-color: #f3f7f9;
+}
+section.contact > div {
+  width: 70%;
+  margin: 1em auto;
+  text-align: center;
+  padding: 1em;
+}
+section.contact > div:before, section.contact > div:after {
+  display: table;
+  content: "";
+}
+section.contact > div:after {
+  clear: both;
+}
+section.contact > div h2 {
+  color: #797979;
+  text-transform: uppercase;
+  padding: 1em 0;
+}
+section.contact > div div.map {
+  padding: 1em 0;
+  float: left;
+  width: 50%;
+}
+section.contact > div div.form {
+  padding: 1em 0;
+  float: left;
+  width: 50%;
+  height: 164px;
+  background-color: #f75311;
+}
+section.contact > div div.form:before, section.contact > div div.form:after {
+  display: table;
+  content: "";
+}
+section.contact > div div.form:after {
+  clear: both;
+}
+section.contact > div div.form .wrapper {
+  margin: 1em;
+}
+section.contact > div div.form .one {
+  padding: 0.5em;
+  margin: 0.2em 0;
+  float: left;
+  width: 25%;
+}
+section.contact > div div.form .two {
+  padding: 0.5em;
+  margin: 0.2em 0;
+  float: left;
+  width: 75%;
+}
+section.contact > div div.form .three, section.contact > div div.form .four {
+  padding: 0.5em;
+  margin: 0.2em 0;
+  width: 100%;
+  float: left;
+}
+
+footer {
+  padding: 1em;
+  text-align: center;
+  background-color: #374249;
+}
+footer p {
+  color: white;
+}
+footer span.foot-name {
+  color: #f75311;
+}
+
+/*# sourceMappingURL=stilovi.css.map */
