@@ -1,0 +1,272 @@
+@import 'vars';
+@import 'mixins';
+
+@include main;
+
+header{
+    background-color: $HandF-color;
+    margin: 0;
+    @include clearfix;
+    color: $font-color;
+    width: 100%;
+    color: white;
+
+    div{
+        float: left;
+        background-color: $main-color;
+
+        img{
+            margin: auto;
+            float: left;
+            width: 30%;
+        }
+
+        a{
+            float: left;
+            padding-top: 1em;
+            color: $link-color;
+        } 
+    }
+
+    nav {
+        float: left;
+
+	        ul {
+		        flex-direction: row;
+                display: flex;
+
+		        li {
+			        display: inline-block;
+			        margin: 10px;
+                    padding: 10px;
+
+			        a { 
+				        @include links;
+                    }
+                }
+            }
+        }
+ }
+
+ section{
+    width:100%;
+    overflow: hidden;
+ }
+
+ .first{
+    position: relative;
+    margin: 0 auto;
+
+    .floater{
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+            h1{
+            text-align: center;
+            color: $link-color;
+            font-size: 40px;
+            }
+
+             p{
+            color: $link-color;
+            text-align: center;
+             }
+    }
+
+    img{
+        width: 100%;
+    }
+}
+
+section.filter{
+    background-color: $link-color;
+    margin: 0;
+    padding: 15px;
+
+    div{
+        padding: 10px;
+        @include clearfix;
+    }
+
+    button{
+        float: right;
+        background: transparent;
+        color: $font-color;
+        padding: 5px;
+        margin-right: 10px;
+        border-radius: 1em;
+
+        &:hover {
+            color: $link-color;
+            background-color: $hover-color;
+        }
+    }
+}
+
+section.img-box{
+    background-color: $section-background;
+
+    div{
+        margin: 10px 10px 10px 10px;
+        flex-wrap: wrap;
+
+    .hvrbox * {
+        box-sizing: border-box;
+    }
+    .hvrbox {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        max-width: 100%;
+        height: auto;
+    }
+    .hvrbox img {
+        max-width: 100%;
+    }
+    .hvrbox .hvrbox-layer_bottom {
+        display: block;
+    }
+    .hvrbox .hvrbox-layer_top {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+    }
+
+    .hvrbox:hover .hvrbox-layer_top,
+    .hvrbox.active .hvrbox-layer_top {
+        opacity: 1;
+    }
+    .hvrbox .hvrbox-text {
+        text-align: center;
+        font-size: 18px;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+    }
+
+    }         
+}
+
+section.prices{
+    margin: 0;
+    background-color: $link-color;
+
+    div{
+        width: 70%;
+        margin: auto;
+        text-align: center;
+        padding: 10px;
+
+        h1{
+            color:$heading-color;
+            text-transform: uppercase;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        h3{
+            color: $font-color;
+            margin: 20px;
+        }
+
+        table{
+            border: 1px solid $font-color;
+            border-collapse: collapse;
+            margin: 10px auto;
+            padding: 10px;
+            width: 60%;
+
+            td, th{
+                border: 1px solid $font-color;
+                padding: 5px 15px;
+                color: $font-color;
+            }
+
+            td.hide{
+                visibility: hidden;
+            }
+
+            td.dsc{
+                background-color: $heading-color;
+                color: $link-color;
+            }
+
+            th{
+                background-color: $main-color;
+                color: $link-color;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+section.contact{
+    background-color: $section-background;
+
+    div{
+        width: 70%;
+        margin: auto;
+        text-align: center;
+        padding: 10px;
+
+        h1{
+            color:$heading-color;
+            text-transform: uppercase;
+            margin: 10px;
+            padding: 10px; 
+        }
+
+        iframe{
+            float: left;
+            margin: 20px;
+        }
+
+        form{
+            margin: 20px;
+            padding: 15px;
+            width: 50%;
+            background-color:$main-color;
+            float: right;
+    
+            select{
+                color: $font-color;
+                float: left;
+                padding: 10px;
+                margin: 10px;
+                width: 30%;
+            }
+
+            input[type=text] {
+                width: 50%;
+                padding: 10px;
+                margin: 10px;
+                border: 1px solid $main-color;
+            }
+
+            input[type=email], textarea{
+                width: 100%;
+                padding: 10px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+footer{
+    background-color: $HandF-color;
+    width: 100%;
+    color: $link-color;
+    text-align: center;
+
+    a{
+        @include links;
+        color: $main-color;
+    }
+}
